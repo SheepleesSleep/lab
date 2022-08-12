@@ -32,6 +32,7 @@ class Television:
         This method increments the channel up by 1.
         with the exception if the the channel limit is reached,
         where it cycle back to channel 0.
+        if the tv is on
         '''
         if self.__status:
             if self.__channel == Television.MAX_CHANNEL:
@@ -44,6 +45,7 @@ class Television:
         This method increments the channel down by 1.
         with the exception if the the channel limit is reached,
         where it cycle back to channel 3.
+        if the tv is on
         '''
         if self.__status:
             if self.__channel == Television.MIN_CHANNEL:
@@ -54,6 +56,7 @@ class Television:
     def volume_up(self) -> None:
         '''
         This method increments the volume up by 1, as long as the maximum volume has not been achieved.
+        if the tv is on
         '''
         if self.__status:
             if self.__volume < Television.MAX_VOLUME:
@@ -62,6 +65,7 @@ class Television:
     def volume_down(self) -> None:
         '''
         This method increments the volume down by 1, as long as the minimum volume has not been achieved.
+        if the tv is on
         '''
         if self.__status:
             if self.__volume > Television.MIN_VOLUME:
